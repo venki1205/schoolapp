@@ -1,0 +1,26 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+
+}
+.login-container{
+     width: 20%;
+     height: 35%;
+     padding: 30px;
+     background-color: whitesmoke;
+     border: 5px;
+     box-shadow: 0 0 10px black;
+ 
+}
+.btn{
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
