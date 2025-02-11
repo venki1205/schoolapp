@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,7 +9,16 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
   
-  constructor(private router: Router) {}
+  constructor(private router: Router, private httpclient:HttpClient) {
+    this.httpclient.get("https://reqres.in/api/users?page=2").subscribe(
+       value=>{
+        console.log(value);
+      },
+      error=>{
+         
+      }
+    )
+  }
   logout(){
     localStorage.removeItem('token');
     this.router.navigateByUrl('/login')
